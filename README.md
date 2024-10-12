@@ -3,6 +3,7 @@
 ## Project setup
 ```
 yarn install
+This is just to check git status update.
 ```
 
 ### Compiles and hot-reloads for development
