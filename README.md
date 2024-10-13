@@ -2,25 +2,39 @@
 ![LingoMate logo](./—Pngtree—letter%20l%20logo%20png%20design_6844876.png)
 
 ## Project setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/VineetMittal007/LingoMate.git
+
+```
+### 2. Navigate to the Project Directory
+```
+cd LingoMate
+```
+
+### 3.  Install Dependencies
+Run the following command to install all the necessary dependencies:
 ```
 yarn install
-This is just to check git status update.
 ```
+or 
+```
+npm install
+```
+### 4. Run the Development Server
+To start the Vue.js development server locally:
+```
+yarn run
+```
+or 
+```
+npm run serve
+```
+After this, open http://localhost:8080 in your browser to see the project running.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
 ## Screenshots
 
 ![App Screenshot](./LingoMate.png)
