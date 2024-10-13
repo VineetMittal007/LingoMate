@@ -1,3 +1,4 @@
+![LingoMate logo](./—Pngtree—letter%20l%20logo%20png%20design_6844876.png)
 # translate-app
 
 ## Project setup
