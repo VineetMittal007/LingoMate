@@ -1,5 +1,5 @@
 # LingoMate
-![LingoMate logo](./—Pngtree—letter%20l%20logo%20png%20design_6844876.png)
+![LingoMate logo](./oie_13183839nUIx9gNH.png)
 
 ## Project setup
 
