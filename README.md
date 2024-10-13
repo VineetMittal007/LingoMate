@@ -1,6 +1,17 @@
 # LingoMate
 
+LingoMate is a user-friendly translation application built with Vue.js that facilitates real-time language translation and offers an intuitive interface for users to interact with. The application supports multiple languages, allowing users to effortlessly translate text from one language to another.
+
+## Technologies Used
+
+- Vue.js: The front-end framework used for building interactive user interfaces.
+- HTML5/CSS3: For structuring and styling the web application.
+- JavaScript: For adding dynamic behavior to the application.
+- Local Storage: Used to save translation history persistently across sessions.
+
 ## Project setup
+
+To get started with LingoMate, follow the setup instructions provided in the README. Once installed, you can run the application locally and start translating your text seamlessly.
 
 ### 1. Clone the Repository
 
@@ -41,9 +52,12 @@ After this, open http://localhost:8080 in your browser to see the project runnin
 
 ## Features
 
+- Choose from a wide range of languages for both input and output, including options like English, Hindi, Spanish, French, and many more.
+-  A clean and responsive design ensures that users can easily navigate through the application.
+- Keep track of previous translations with a history log that allows users to view and delete past entries.
 - Translation History is stored in the localstorage. So even, If the user refreshes the page the Translation history remains there.
-- Added the Dark/Light Mode.
-- Also added a .txt feature to translate an entire file and download for such.
+- The application offers a toggle between light and dark themes, providing a comfortable reading experience in different lighting conditions.
+- Users can upload text files for translation, making it convenient for documents and larger texts.
 - 58 languages were used. You can find JSON for this in language.js in src/language.js.
 - You can also swap the languages.
 
