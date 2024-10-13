@@ -46,10 +46,10 @@ After this, open http://localhost:8080 in your browser to see the project runnin
 
 ## Screenshots
 
-![App Screenshot](./Screenshot%202024-10-13%20234036.png)
-![App Screenshot](./Screenshot%202024-10-13%20233947.png)
-![App Screenshot](./Screenshot%202024-10-13%20234008.png)
-![App Screenshot](./Screenshot%202024-10-13%20234051.png)
+![App Screenshot](./Screenshot%202024-10-13%20234443.png)
+![App Screenshot](./Screenshot%202024-10-13%20234505.png)
+![App Screenshot](./Screenshot%202024-10-13%20234525.png)
+![App Screenshot](./Screenshot%202024-10-13%20234538.png)
 
 ## Features
 
