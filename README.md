@@ -29,3 +29,15 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+## Support
+
+For support or suggestions, email vineetmittalxvnm@gmail.com  .
+
+## Authors
+
+- [@vineet_mittal](https://www.github.com/VineetMittal007)
+
+
+
