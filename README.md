@@ -5,8 +5,7 @@ LingoMate is a user-friendly translation application built with Vue.js that faci
 ## Technologies Used
 
 - Vue.js: The front-end framework used for building interactive user interfaces.
-- HTML5/CSS3: For structuring and styling the web application.
-- JavaScript: For adding dynamic behavior to the application.
+- CSS3: For styling the web application.
 - Local Storage: Used to save translation history persistently across sessions.
 
 ## Project setup
