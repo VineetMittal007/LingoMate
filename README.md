@@ -10,7 +10,7 @@ LingoMate is a user-friendly translation application built with Vue.js that faci
 
 ## Project setup
 
-To get started with LingoMate, follow the setup instructions provided in the README. Once installed, you can run the application locally and start translating your text seamlessly.
+To get started with LingoMate, follow the setup instructions below. Once installed, you can run the application locally and start translating your text seamlessly.
 
 ### 1. Clone the Repository
 
@@ -69,7 +69,8 @@ After this, open http://localhost:8080 in your browser to see the project runnin
 - Translation history can have a download option as well.
 - If the input is very large then the Translation will have a very large paragraphs. 
 - And since we know, its stored in localStorage, this large file could cover a large part of your largestorage. You have to delete this particular file to clear up your localStorage.
-
+- Since the translation feature relies on online APIs, users must have a stable internet connection to use the app effectively. This could hinder usability in areas with poor connectivity.
+- Currently, the app does not provide offline capabilities. Users cannot access translation features without an internet connection, which could be a significant limitation for mobile users.
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
