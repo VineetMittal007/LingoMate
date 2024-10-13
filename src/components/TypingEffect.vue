@@ -28,7 +28,7 @@
             setTimeout(this.type, this.typingSpeed); 
           } else {
             this.isClearing = true; 
-            setTimeout(this.clearText, 10000); 
+            setTimeout(this.clearText, 4000); 
           }
         }
       },

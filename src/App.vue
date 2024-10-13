@@ -1,5 +1,7 @@
 <template>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <!-- GOOGLE FONTS -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">  
+  <!-- MAIN WORKING DIRECTORY -->
   <div id="app">
     <!-- DARK MODE LIGHT MODE -->
     <header> 
@@ -14,16 +16,19 @@
       {{ darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }} 
     </button>
     </header>
+
+<!-- WELCOME TO LINGOMATE -->
     <header class="lingo">
         <TypingEffect/>
     </header>
+
     <TranslateInput @translate="handleTranslate" />
-    <TranslationOutput :translation="translation" />
-    <HistoryList :history="history" /> 
   </div>
+
   <footer class="app-footer">
     Made with <span class="heart">❤️</span> by <a href="https://github.com/VineetMittal007" target="_blank">VINEET_MITTAL</a>
   </footer>
+
 </template>
 
 <script>
@@ -52,10 +57,13 @@ export default {
 };
 </script>
 
+
+
+
 <style scoped>
+
 .GITH{
   color: black;
-  
 }
 a {
   text-decoration: none;

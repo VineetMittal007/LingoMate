@@ -171,6 +171,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 library.add(faChevronDown);
 
+
+
 export default {
   data() {
     return {
@@ -258,6 +260,11 @@ export default {
       return `${this.outputLanguage.name} (${this.outputLanguage.native})`;
     },
   },
+
+
+  /////METHODS
+
+
   methods: {
     toggleDetails(index) {
       this.expandedIndex = this.expandedIndex === index ? null : index;
@@ -274,64 +281,61 @@ export default {
     selectInputLanguage(language) {
       this.inputLanguage = language;
       this.inputDropdownActive = false;
-      // this.translate();
     },
     selectOutputLanguage(language) {
       this.outputLanguage = language;
       this.outputDropdownActive = false;
-      // this.translate();
     },
     limitInput() {
       if (this.inputText.length > 5000) {
         this.inputText = this.inputText.slice(0, 5000);
       }
-      // this.translate();
     },
-    speakText() {
-      if (!this.outputText.trim()) {
-        alert('Enter something to translate first.');
-        return; // If the textarea is empty or just contains spaces, do nothing
-      } 
-      if ('speechSynthesis' in window) {
-  const utterance = new SpeechSynthesisUtterance(this.outputText);
+    // THE BELOW PROGRAM HAS BEEN UNFORTUNATELY PUT TO BIN DUE TO ERROR IN THE API
+//     speakText() {
+//       if (!this.outputText.trim()) {
+//         alert('Enter something to translate first.');
+//         return; // If the textarea is empty or just contains spaces, do nothing
+//       } 
+//       if ('speechSynthesis' in window) {
+//   const utterance = new SpeechSynthesisUtterance(this.outputText);
 
-  // Set pitch, rate, and volume
-  utterance.pitch = 1;  // Range: 0 (lowest) to 2 (highest)
-  utterance.rate = 1;   // Range: 0.1 (slowest) to 10 (fastest)
-  utterance.volume = 1; // Range: 0 (silent) to 1 (loudest)
+//   // Set pitch, rate, and volume
+//   utterance.pitch = 1;  // Range: 0 (lowest) to 2 (highest)
+//   utterance.rate = 1;   // Range: 0.1 (slowest) to 10 (fastest)
+//   utterance.volume = 1; // Range: 0 (silent) to 1 (loudest)
 
-  // Get the list of available voices
-  const voices = window.speechSynthesis.getVoices();
+//   // Get the list of available voices
+//   const voices = window.speechSynthesis.getVoices();
 
-  // Optionally, set a preferred voice
-  const preferredVoice = voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Google')); 
-  if (preferredVoice) {
-    utterance.voice = preferredVoice; // Use the preferred voice
-  } else {
-    console.warn('Preferred voice not available, using default voice.');
-  }
+//   // Optionally, set a preferred voice
+//   const preferredVoice = voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Google')); 
+//   if (preferredVoice) {
+//     utterance.voice = preferredVoice; // Use the preferred voice
+//   } else {
+//     console.warn('Preferred voice not available, using default voice.');
+//   }
 
-  // Add event listeners for better control and error handling
-  utterance.onstart = () => {
-    console.log('Speech synthesis started');
-  };
+//   // Add event listeners for better control and error handling
+//   utterance.onstart = () => {
+//     console.log('Speech synthesis started');
+//   };
 
-  utterance.onend = () => {
-    console.log('Speech synthesis finished');
-  };
+//   utterance.onend = () => {
+//     console.log('Speech synthesis finished');
+//   };
 
-  utterance.onerror = (event) => {
-    console.error('Speech synthesis error:', event.error);
-  };
+//   utterance.onerror = (event) => {
+//     console.error('Speech synthesis error:', event.error);
+//   };
 
-  // Speak the text
-  window.speechSynthesis.speak(utterance);
+//   // Speak the text
+//   window.speechSynthesis.speak(utterance);
   
-} else {
-  alert('Sorry, your browser does not support Text-to-Speech.');
-}
-
-    },
+// } else {
+//   alert('Sorry, your browser does not support Text-to-Speech.');
+// } 
+// },
     translate() {
       if (!this.inputText.trim()) {
         alert('Enter some Text first!');
@@ -360,7 +364,6 @@ export default {
         reader.readAsText(file);
         reader.onload = (e) => {
           this.inputText = e.target.result;
-          // this.translate();
         };
         reader.onerror = (e) => {
           alert('Error reading file.');
@@ -379,7 +382,6 @@ export default {
       this.inputText = this.outputText;
       this.outputText = tempText;
 
-      // this.translate();
     },
     downloadTranslatedFile() {
       if (!this.outputText.trim()) {
@@ -393,8 +395,6 @@ export default {
       a.href = url;
       a.click();
     },
-
-
 
     //HISTORY
     addToHistory(inputText, outputText, inputLanguage, outputLanguage) {
@@ -414,18 +414,19 @@ export default {
       }
       localStorage.setItem('translationHistory', JSON.stringify(this.history));
       this.showSnackbar('Translation saved to history');
-    },
-    deleteHistory(index) {
+      },
+      deleteHistory(index) {
       this.history.splice(index, 1);
       localStorage.setItem('translationHistory', JSON.stringify(this.history));
       this.showSnackbar('History entry deleted');
-    },
-    showSnackbar(message) {
-      this.snackbarMessage = message;
-      setTimeout(() => {
-        this.snackbarMessage = '';
-      }, 3500);
-    },
+      },
+      // tHIS PROGERAM WAS NOT SUCECESFUL AS WELL
+    // showSnackbar(message) {
+    //   this.snackbarMessage = message;
+    //   setTimeout(() => {
+    //     this.snackbarMessage = '';
+    //   }, 3500);
+    // },
 
   },
   mounted() {
