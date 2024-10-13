@@ -176,7 +176,7 @@ export default {
     return {
       expandedIndex: null,
       snackbarMessage: '',
-      inputText: 'This is a sample Input. Click on the transalate button. Yoou can select multiple languages from the dropdown menu. There is a History tab that stores all your last 10 Inputs. You can also click on the Speaker button for Text to speech of the translated output.',
+      inputText: 'This is a sample Input. Click on the translate button. Yoou can select multiple languages from the dropdown menu. There is a History tab that stores the last 10 entries. The text to speech button has been disabled as it is not possible to get the Suitable API.',
       outputText: '',
       inputLanguage: { name: 'English', native: 'English', code: 'en' },
       outputLanguage: { name: 'Hindi', native: 'हिन्दी', code: 'hi' },
@@ -248,6 +248,8 @@ export default {
     ],
     };
   },
+
+
   computed: {
     inputLanguageTitle() {
       return `${this.inputLanguage.name} (${this.inputLanguage.native})`;
