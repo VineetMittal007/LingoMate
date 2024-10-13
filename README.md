@@ -51,6 +51,9 @@ After this, open http://localhost:8080 in your browser to see the project runnin
 ![App Screenshot](./Screenshot%202024-10-13%20234525.png)
 ![App Screenshot](./Screenshot%202024-10-13%20234538.png)
 
+## Deployed 
+The website is deployed on github pages. https://github.com/VineetMittal007/LingoMate
+
 ## Features
 
 - Choose from a wide range of languages for both input and output, including options like English, Hindi, Spanish, French, and many more.
