@@ -48,7 +48,6 @@
     }
   };
   </script>
-  
   <style scoped>
  
   @keyframes blink {

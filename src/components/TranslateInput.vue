@@ -1,7 +1,11 @@
 <template>
+
+  <!-- MAINPROGRAM -->
   <div class="CONTENT">
    <div class="container">
+    <!-- INPUT TEXT SIDE  -->
       <div class="card input-wrapper">
+        <!-- DROPDOWNBUTTON -->
         <div class="from">
           <span class="heading">From :</span>
           <div class="dropdown-container">
@@ -9,7 +13,6 @@
           <span class="selected">{{ inputLanguage.name }} ({{ inputLanguage.native }})</span>
           <i class="fas fa-chevron-down" style="color: black;"></i> 
           </div>
-
 
           <!-- Dropdown menu  -->
           <ul v-if="inputDropdownActive" class="dropdown-menu">
@@ -19,10 +22,12 @@
           {{ language.name }} ({{ language.native }})
           </li>
           </ul>
+          <!-- Dropdown menu END!! -->
+        </div>
+      </div>
+      <!-- DROPDOWNBUTTON END -->
 
-        </div>
-        </div>
-        <!-- Input Text Area -->
+      <!-- Input Text Area -->
         <div class="text-area">
           <textarea
             id="input-text"
@@ -32,46 +37,64 @@
             rows="10"
             placeholder="Enter your text here"
           ></textarea>
-         
         </div>
+      <!-- Input Text Area END-->
+      
+      <!-- CHARACTERCOUNT -->
         <div class="chars pareshan"><span>{{ inputText.length }}</span> / 5000</div>
+      <!-- CHARACTERCOUNT END-->
 
-        <!-- File Upload -->
+      <!-- File Upload -->
         <div class="card-bottom">
           <p>Or choose your document!</p>
-          <label for="upload-document">
-            <span class="down" id="upload-title">{{ uploadedFileName || 'Choose File' }}</span>
-            <ion-icon class="Downicon" name="cloud-upload-outline"></ion-icon>
-            <input type="file" id="upload-document" @change="handleFileUpload" hidden />
-          </label>
+            <label for="upload-document">
+              <span class="down" id="upload-title">{{ uploadedFileName || 'Choose File' }}</span>
+                <ion-icon class="Downicon" name="cloud-upload-outline"></ion-icon>
+              <input type="file" id="upload-document" @change="handleFileUpload" hidden />
+            </label>
         </div>
+      <!-- File UploadEnd -->
+
       </div>
+      <!-- INPUT TEXT SIDE END -->
+
+
+
+
 
       <!-- Swap Button -->
-      <div class="center">
-        <div class="swap-position" @click="swapLanguages">
-          <i class="fas fa-exchange-alt"></i>
+        <div class="center">
+          <div class="swap-position" @click="swapLanguages">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
         </div>
-      </div>
+      <!-- Swap Button END-->
+
+
+
+
 
       <!-- Output Language Dropdown -->
       <div class="card output-wrapper">
+        <!-- DROPDOWN -->
         <div class="to">
           <span class="heading">To :</span>
-          <div class="dropdown-container">
-            <div class="dropdown-toggle" ref="outputDropdown" @click="toggleDropdown('output')">
+            <div class="dropdown-container">
+              <div class="dropdown-toggle" ref="outputDropdown" @click="toggleDropdown('output')">
               <span class="selected">{{ outputLanguage.name }} ({{ outputLanguage.native }})</span>
               <i class="fas fa-chevron-down" style="color: black;"></i> 
-            </div>
-            <ul v-if="outputDropdownActive" class="dropdown-menu">
-              <li v-for="language in languages" :key="language.code" 
+              </div>
+              <ul v-if="outputDropdownActive" class="dropdown-menu">
+                <li v-for="language in languages" :key="language.code" 
                   :class="{'active': outputLanguage.code === language.code}" 
                   @click="selectOutputLanguage(language)">
                 {{ language.name }} ({{ language.native }})
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
         </div>
+        <!-- DROPDOWN END -->
+
 
         <!-- Output Text Area -->
         <textarea
@@ -82,10 +105,13 @@
           placeholder="Translated text will appear here"
           disabled
         ></textarea>
-        <button @click="speakText" class="sound-button">
-      <i class="g fas fa-volume-up"></i>  <!-- Font Awesome sound icon -->
-    </button>
-    <button @click="translate" class="translate-button transbut">Translate</button>
+        <!-- Output Text AreaEnd -->
+         <!-- TTS -->
+         <!-- <button @click="speakText" class="sound-button"> -->
+              <!-- <i class="g fas fa-volume-up"></i>  Font Awesome sound icon -->
+          <!-- </button> -->
+          <!-- TTS END-->
+        <button @click="translate" class="translate-button transbut">Translate</button>
 
         <!-- Download Button -->
         <div class="card-bottom">
@@ -95,15 +121,17 @@
             <ion-icon class="Downicon" name="cloud-download-outline"></ion-icon>
           </button>
         </div>
+        <!-- Download Button End-->
+
       </div>
+      <!-- Output Language Dropdown End-->
     </div>
   </div>
+  <!-- MAINPROGRAMEND -->
 
 
 
   <!-- HISTORY -->
-  <!-- <div class="CONTENT"> -->
-  <!-- <div class="history"> -->
     <div class="history-container">
       <h3 class="history-title">Translation History</h3>
       <ul class="history-list">
@@ -129,15 +157,15 @@
           </li>
         </transition-group>
       </ul>
-      <div v-if="snackbarMessage" class="snackbar">{{ snackbarMessage }}</div>
+      <!-- <div v-if="snackbarMessage" class="snackbar">{{ snackbarMessage }}</div> THIS LINE DOES NOT WORK FOR SOME REASON -->
     </div>
-
-
-
-
-
+  <!-- HISTORYEND -->
 
 </template>
+
+
+
+
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -258,16 +286,49 @@ export default {
       // this.translate();
     },
     speakText() {
-      if (!this.inputText.trim()) {
+      if (!this.outputText.trim()) {
         alert('Enter something to translate first.');
         return; // If the textarea is empty or just contains spaces, do nothing
       } 
       if ('speechSynthesis' in window) {
-    const utterance = new SpeechSynthesisUtterance(this.outputText);
-    speechSynthesis.speak(utterance);
+  const utterance = new SpeechSynthesisUtterance(this.outputText);
+
+  // Set pitch, rate, and volume
+  utterance.pitch = 1;  // Range: 0 (lowest) to 2 (highest)
+  utterance.rate = 1;   // Range: 0.1 (slowest) to 10 (fastest)
+  utterance.volume = 1; // Range: 0 (silent) to 1 (loudest)
+
+  // Get the list of available voices
+  const voices = window.speechSynthesis.getVoices();
+
+  // Optionally, set a preferred voice
+  const preferredVoice = voices.find(voice => voice.lang === 'en-US' && voice.name.includes('Google')); 
+  if (preferredVoice) {
+    utterance.voice = preferredVoice; // Use the preferred voice
   } else {
-    alert('Sorry, your browser does not support Text-to-Speech.');
+    console.warn('Preferred voice not available, using default voice.');
   }
+
+  // Add event listeners for better control and error handling
+  utterance.onstart = () => {
+    console.log('Speech synthesis started');
+  };
+
+  utterance.onend = () => {
+    console.log('Speech synthesis finished');
+  };
+
+  utterance.onerror = (event) => {
+    console.error('Speech synthesis error:', event.error);
+  };
+
+  // Speak the text
+  window.speechSynthesis.speak(utterance);
+  
+} else {
+  alert('Sorry, your browser does not support Text-to-Speech.');
+}
+
     },
     translate() {
       if (!this.inputText.trim()) {

@@ -4,7 +4,7 @@
     <!-- DARK MODE LIGHT MODE -->
     <header> 
       <button class="GITH DARK">
-        <a class="Git" href="https://github.com/VineetMittal007/" target="_blank">
+        <a class="Git" href="https://github.com/VineetMittal007/LingoMate" target="_blank">
           GitHub 
     </a>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-logo ImageGit" />
@@ -29,8 +29,6 @@
 <script>
 
 import TranslateInput from './components/TranslateInput.vue';
-import TranslationOutput from './components/TranslationOutput.vue';
-import HistoryList from './components/HistoryList.vue';
 import TypingEffect from './components/TypingEffect.vue';
 
 export default {
@@ -44,8 +42,6 @@ export default {
   components: {
     TypingEffect,
     TranslateInput,
-    TranslationOutput,
-    HistoryList,
   },
   methods: {
     toggleDarkMode() {
