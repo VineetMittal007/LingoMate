@@ -178,7 +178,7 @@ export default {
     return {
       expandedIndex: null,
       snackbarMessage: '',
-      inputText: 'This is a sample Input. Click on the translate button. Yoou can select multiple languages from the dropdown menu. There is a History tab that stores the last 10 entries. The text to speech button has been disabled as it is not possible to get the Suitable API.',
+      inputText: 'This is a sample Input. Click on the translate button. You can select multiple languages from the dropdown menu. There is a History tab that stores the last 10 entries. The text to speech button has been disabled as it is not possible to get the suitable API.',
       outputText: '',
       inputLanguage: { name: 'English', native: 'English', code: 'en' },
       outputLanguage: { name: 'Hindi', native: 'हिन्दी', code: 'hi' },

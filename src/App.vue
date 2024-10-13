@@ -28,11 +28,9 @@
   <footer class="app-footer">
     Made with <span class="heart">❤️</span> by <a href="https://github.com/VineetMittal007" target="_blank">VINEET_MITTAL</a>
   </footer>
-
 </template>
 
 <script>
-
 import TranslateInput from './components/TranslateInput.vue';
 import TypingEffect from './components/TypingEffect.vue';
 
