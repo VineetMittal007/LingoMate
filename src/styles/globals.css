@@ -93,16 +93,38 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.transbut{
+/* .transbut{
   margin-left: 10px;
-  /* background-color: var(--background-color); */
   background-color: #cecbcb;
   color: black;
+} */
+.transbut {
+  margin-left: 10px;
+  padding: 10px 20px;          /* Padding for more defined shape */
+  background-color: #cecbcb;   /* Button background */
+  color: #000;                 /* Text color */
+  font-size: 16px;             /* Increase font size for readability */
+  font-weight: bold;           /* Make the text bold */
+  border: none;                /* Remove the border */
+  border-radius: 8px;          /* Rounded corners */
+  cursor: pointer;             /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover and click effect */
 }
 
-.translate-button:hover {
-  background-color: var(--text-color);
+.transbut:hover {
+  background-color: var(--text-color);   /* Darker background on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
 }
+
+.transbut:active {
+  transform: translateY(0);    /* Reset button position on click */
+  background-color: #a7a5a5;   /* Slightly darker background on active */
+}
+
+/* .translate-button:hover {
+  background-color: var(--text-color);
+} */
 .app-footer {
   text-align: center;
   padding: 10px;
@@ -607,4 +629,11 @@ body {
   to {
     opacity: 0;
   }
+}
+.choose{
+  font-size: 110%;
+  color: #000000;
+}
+.dark-mode p {
+  color: #ffffff; /* Change paragraph color in dark mode */
 }

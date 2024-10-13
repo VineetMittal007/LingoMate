@@ -46,7 +46,7 @@
 
       <!-- File Upload -->
         <div class="card-bottom">
-          <p>Or choose your document!</p>
+          <p class="choose">Choose your document(.txt)!</p>
             <label for="upload-document">
               <span class="down" id="upload-title">{{ uploadedFileName || 'Choose File' }}</span>
                 <ion-icon class="Downicon" name="cloud-upload-outline"></ion-icon>
@@ -69,8 +69,6 @@
           </div>
         </div>
       <!-- Swap Button END-->
-
-
 
 
 
@@ -115,7 +113,7 @@
 
         <!-- Download Button -->
         <div class="card-bottom">
-          <p>Download as a document!</p>
+          <p class="choose">Download as a document!</p>
           <button class="down" id="download-btn" @click="downloadTranslatedFile">
             <span class="down">Download</span>
             <ion-icon class="Downicon" name="cloud-download-outline"></ion-icon>

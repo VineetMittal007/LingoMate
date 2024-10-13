@@ -8,10 +8,10 @@
   export default {
     data() {
       return {
-        text: "Welcome to Lingomate", // The text to type
-        displayedText: "", // The text currently displayed
-        index: 0, // The current character index
-        typingSpeed: 100, // Speed of typing in milliseconds
+        text: "Welcome to Lingomate", 
+        displayedText: "", 
+        index: 0, // 
+        typingSpeed: 100, 
         clearingSpeed: 100, 
         isClearing: false 
       };
@@ -34,15 +34,14 @@
       },
       clearText() {
         if (this.index > 0) {
-          this.displayedText = this.displayedText.slice(0, -1); // Remove last character
-          this.index--; // Decrement index
-          setTimeout(this.clearText, this.clearingSpeed); // Call clearText again after delay
+          this.displayedText = this.displayedText.slice(0, -1); 
+          this.index--; 
+          setTimeout(this.clearText, this.clearingSpeed); 
         } else {
-          // Finished clearing, reset everything
-          this.isClearing = false; // Reset the flag
-          this.index = 0; // Reset index
-          this.displayedText = ""; // Clear displayed text
-          this.type(); // Restart typing
+          this.isClearing = false; 
+          this.index = 0; 
+          this.displayedText = ""; 
+          this.type(); 
         }
       }
     }

@@ -8,7 +8,7 @@
       <button class="GITH DARK">
         <a class="Git" href="https://github.com/VineetMittal007/LingoMate" target="_blank">
           GitHub 
-    </a>
+       </a>
     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-logo ImageGit" />
     </button>
     <button class="DARK" @click="toggleDarkMode">
