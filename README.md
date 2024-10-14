@@ -1,6 +1,6 @@
 # LingoMate
 
-LingoMate is a user-friendly translation application built with Vue.js that facilitates real-time language translation and offers an intuitive interface for users to interact with. The application supports multiple languages, allowing users to effortlessly translate text from one language to another.
+LingoMate is a user-friendly translation application built with Vue.js. It allows users to translate text in real-time across a wide range of languages, all while offering an intuitive interface. With LingoMate, you can effortlessly convert text from one language to another and manage your translation history seamlessly.
 
 ## Technologies Used
 
@@ -52,7 +52,7 @@ After this, open http://localhost:8080 in your browser to see the project runnin
 ![App Screenshot](./Screenshot%202024-10-13%20234538.png)
 
 ## Deployed 
-The website is deployed on github pages. https://vineetmittal007.github.io/LingoMate/
+LingoMate is deployed on GitHub Pages. You can view the live version at https://vineetmittal007.github.io/LingoMate/
 
 ## Features
 
@@ -82,8 +82,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ## Support
-
-For support or suggestions, email vineetmittalxvnm@gmail.com  .
+If you'd like to contribute to LingoMate, feel free to fork the repository and submit a pull request. For any issues or suggestions, you can reach out via email or GitHub. Email vineetmittalxvnm@gmail.com  .
 
 ## Authors
 
