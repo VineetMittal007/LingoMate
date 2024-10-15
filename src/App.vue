@@ -22,7 +22,7 @@
         <TypingEffect/>
     </header>
 
-    <TranslateInput @translate="handleTranslate" />
+    <TranslateInput/>
   </div>
 
   <footer class="app-footer">
@@ -38,8 +38,7 @@ export default {
   data() {
     return {
       darkMode: false,
-      translation: '',
-      history: [],
+      // translation: '',
     };
   },
   components: {
@@ -54,6 +53,13 @@ export default {
   },
 };
 </script>
+
+
+
+
+
+
+
 
 
 
