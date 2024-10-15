@@ -5,12 +5,16 @@
   <div id="app">
     <!-- DARK MODE LIGHT MODE -->
     <header> 
-      <button class="GITH DARK">
-        <a class="Git" href="https://github.com/VineetMittal007/LingoMate" target="_blank">
+      <a class="Git" href="https://github.com/VineetMittal007/LingoMate" target="_blank">
+      <button class="GITH DARK" >
+        
           GitHub 
-       </a>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-logo ImageGit" />
+        
+     <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo" class="github-logo ImageGit" />
     </button>
+     </a>
+    
+  
     <button class="DARK" @click="toggleDarkMode">
       <i :class="darkMode ? 'fas fa-sun' : 'fas fa-moon'"></i>
       {{ darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }} 
